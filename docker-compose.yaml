@@ -1,0 +1,27 @@
+version: '5.0'
+
+services:
+  monitoramento:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: playwright
+    links:
+      - db
+    depends_on:
+      - db
+  
+  db:
+    build: 
+      context: .
+      dockerfile: Dockerfile.db
+    container_name: db
+    environment:
+      - POSTGRES_USER=sistema
+      - POSTGRES_PASSWORD=sistema
+      - POSTGRES_DATABASE=monitoramento
+    ports:
+      - "5432:5432"
+
+
+# Necessário fazer ajustes no arquivo init.sql e nesse aqui para automatizar a criação dos containers Docker

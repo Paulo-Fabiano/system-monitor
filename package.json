@@ -1,0 +1,19 @@
+{
+  "name": "github-pfabianof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.47.0",
+    "crypto-js": "^4.2.0",
+    "pg": "^8.12.0"
+  }
+}
